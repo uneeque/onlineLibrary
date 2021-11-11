@@ -8,8 +8,8 @@ class Genre(models.Model):
                             verbose_name="Жанр книги")
 
 
-def __str__(self):
-    return self.name
+    def __str__(self):
+        return self.name
 
 
 class Language(models.Model):
@@ -18,8 +18,8 @@ class Language(models.Model):
                             verbose_name="язык книги")
 
 
-def __str__(self):
-    return self.name
+    def __str__(self):
+        return self.name
 
 
 class Author(models.Model):
@@ -33,8 +33,8 @@ class Author(models.Model):
                                     null=True, blank=True)
 
 
-def __str__(self):
-    return self.last_name
+    def __str__(self):
+        return self.last_name
 
 
 class Book(models.Model):

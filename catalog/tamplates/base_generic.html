@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block title %} <title>Books World</title> {% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Добавление Статичного  CSS - файла -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block head %}
+        <img src="{% static 'image/logotip.jpg '%}"
+        style="width:200px; height:100px;" align="absmiddle">
+        <font size=7, color="blue"> Сайт "Мир книг"</font>
+    {% endblock %}
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-cm-2">
+                {% block sidebar %}
+                <ul>
+                    <li><a href="{% url 'index'%}"> ГЛавная страницы</a></li>
+                    <li><a href=""> Все книги</a></li>
+                    <li><a href=""> Все авторы</a></li>
+                </ul>
+                {% endblock %}
+            </div>
+            <div class="col-cm-10 ">
+                {% block content %} {% endblock %}
+                {% block footer %}
+                    {% bloch copyright %}
+                <p>Copyright OOO "Люди и книги", 2020</p>
+                {% endblock %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

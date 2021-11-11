@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1> Главная страница сайта </h1>
+    <p> Главная тсраница сайта. Сайт осздана в качестве учебного примера</p>
+
+<h2> Динамичный контен </h2>
+    <p> База данных сайта содержит следующее колличество записей: </p>
+        <ul>
+            <li><strong> Колличество книг: </strong> {{ num_books }}</li>
+            <li><strong>Колличество экземпляров книг: </strong>{{ num_instance }}</li>
+            <li><strong>колличество экземпляров книг в заказе: </strong>{{ num_instance_available }}</li>
+            <li><strong>Колличество Авторов: </strong> {{ num_authors }}</li>
+        </ul>
+{% endblock %}
