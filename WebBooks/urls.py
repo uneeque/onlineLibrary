@@ -22,5 +22,5 @@ from catalog import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('admin/', admin.site.urls),
-    url(r'^books/$', views.BookListView.as_view(), name='books')
+    path('books/', views.BookListView.as_view(), name='books'),
 ]

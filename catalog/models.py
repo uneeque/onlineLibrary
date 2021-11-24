@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 
 
+
 class Genre(models.Model):
     name = models.CharField(max_length=200,
                             help_text="Введите жанр книги",
@@ -85,3 +86,5 @@ class BookInstance(models.Model):
 
     def __str__(self):
         return '%s %s %s' % (self.inv_nom, self.book, self.status)
+
+

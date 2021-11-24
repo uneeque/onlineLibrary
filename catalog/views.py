@@ -12,7 +12,7 @@ def index(request):
     num_instances_available = BookInstance.objects.count()
     num_authors = Author.objects.count()
 
-    return render(request, 'base_generic.html',
+    return render(request, 'index.html',
                   context={
                       'num_books': num_books,
                       'num_instances': num_instances,

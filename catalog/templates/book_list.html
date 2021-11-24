@@ -1,5 +1,4 @@
-{% extends base_generic.html %}
-
+{% extends "base_generic.html" %}
 {% block content %}
     <h1>Book list </h1>
     {% if book_list %}
@@ -13,6 +12,6 @@
         {% endfor %}
     </ul>
     {% else %}
-        <p> Data Base is empty </p>\
+        <p> Data Base is empty </p>
     {% endif %}
 {% endblock %}
