@@ -31,8 +31,6 @@ class Author(models.Model):
     day_of_death = models.DateField(help_text="Введите дату смерти автора",
                                     verbose_name="даьа смерти автора",
                                     null=True, blank=True)
-
-
     def __str__(self):
         return self.last_name
 

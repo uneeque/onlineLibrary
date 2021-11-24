@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1> Main page </h1>
+    <p> Main testpage of World book site </p>
+
+<h2> dinamic part of site </h2>
+    <p> DataBase have : </p>
+        <ul>
+            <li><strong> Book collection: </strong> {{num_books}}</li>
+            <li><strong> Number of instance: </strong>{{num_instance}}</li>
+            <li><strong> Number of instance in order: </strong>{{num_instance_available}}</li>
+            <li><strong> Number of authors: </strong> {{num_authors}}</li>
+        </ul>
+{% endblock %}
